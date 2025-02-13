@@ -274,7 +274,7 @@ void ut_m(char* filename) {
 	return;
 }
 
-int32_t read_and_get_s_max_id(char* filename, bool ut_s) { // ut_s or retrieve max index, since slave index file is not maintained
+int32_t read_and_get_s_max_id(char* filename, bool ut_s) { // ut_s or retrieve max index
 	TournamentParticipation participation;
 	FILE* slave_file = open_file(filename, "rb");
 	int32_t maxid = -1;
@@ -646,39 +646,7 @@ void printoptions() {
 	printf("  (13) exit.\n");
 }
 
-/*
-[m/s]index_file:
-			2x trashIndex: Index
-			18x [m/s]Index: Index
-*/
 int main() {
-
-
-	//Player Bob = { 0, false, "Bob", "Cloud Cuckooland", "IM", 120, 5, 0, -1 };
-	//Player Alice = { 1, false, "Alice", "Cloud Cuckooland", "GM", 5000, 89, 0, -1 };
-	//Player AnonymousPamphleteer = { 2, false, "Anonymous Pamphleteer", "Questionable", "FM", 7000, 4758329, 0, -1 };
-	//Player Jakjxjk = { 3, false, "Kjabxkj", "Questionable", "Untitled", 98, 328588, 0, -1 };
-	//Player  Ehhhh = { 4, false, "Ehhhh", "????", "FM", 3, 2, 0, -1 };
-	//FILE* master_file = open_file("m.bin", "wb");
-	//fwrite(&Bob, sizeof(Player), 1, master_file);
-	//fwrite(&Alice, sizeof(Player), 1, master_file);
-	//fwrite(&AnonymousPamphleteer, sizeof(Player), 1, master_file);
-	//fwrite(&Jakjxjk, sizeof(Player), 1, master_file);
-	//fwrite(&Ehhhh, sizeof(Player), 1, master_file);
-	//fclose(master_file);
-	//Index trash = { -1, -1 }, ind;
-	//FILE* index_file = open_file("mi.bin", "wb");
-	//fwrite(&trash, sizeof(Index), 1, index_file);
-	//fwrite(&trash, sizeof(Index), 1, index_file);
-	//for (int i = 0; i < 5; i++) {
-	//	ind.playerId = i; ind.position = i * sizeof(Player);
-	//	fwrite(&ind, sizeof(Index), 1, index_file);
-	//}
-	//for (int i = 5; i < 20; i++) {
-	//	fwrite(&trash, sizeof(Index), 1, index_file);
-	//}
-	//exit(1);
-
 	char mindex_file[MAX_FIELD_LENGTH] = "mi.bin";
 	char m_file[MAX_FIELD_LENGTH] = "m.bin";
 	char s_file[MAX_FIELD_LENGTH] = "s.bin";

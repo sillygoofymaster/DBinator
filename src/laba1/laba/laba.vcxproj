@@ -133,7 +133,6 @@
     <None Include="m.bin" />
     <None Include="mi.bin" />
     <None Include="s.bin" />
-    <None Include="si.bin" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structs.h" />
