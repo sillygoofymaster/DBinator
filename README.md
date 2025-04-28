@@ -1,1 +1,1 @@
-Database homework. Simulates two-table database with one-two-many relationship (one Player has many Participations). Tables are stored in two separate binary files, the additional third file keeps track of Players' positions in their file. 
+DB homework. Simulates two-table database with one-two-many relationship (one Player has many Participations). Tables are stored in two separate binary files, the additional third file keeps track of Players' positions in their file. 
